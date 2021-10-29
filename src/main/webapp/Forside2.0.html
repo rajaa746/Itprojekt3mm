@@ -5,6 +5,24 @@
     <title>Region H</title>
     <link rel="stylesheet" href="Forside2.0.css">
 </head>
+
+<script language="javascript" >
+
+    function validate(){
+        var fname = document.getElementById("fname").value;
+        var lkode = document.getElementById("lkode").value;
+        if ( fname == "123456-7890" && lkode == "hello"){
+
+            window.location = "Welcome.html"; // Redirecting to other page.
+            return false;
+        }
+        else{
+            alert("Forkert kode eller brugernavn prøv igen!");
+
+        }
+    }
+
+</script>
 <body>
   <div class="baggrundsbillede"></div>
   <div class="Titel">
@@ -13,29 +31,21 @@
   <div class="baggrundstext">
       <h2>Log Ind</h2>
       <p>
-      <form>
+      <form action="welcome.html" method="post"   onclick="return
+check_info()";>
       <label for="fname">CPR-nummer</label><br>
-      <input type="text" id="fname" brugernavn="fname"> <br>
+      <input type="text" id="fname" brugernavn="fname" maxlength="11">  <br>
 
       <label for="lkode">Adgangskode</label><br>
-      <input type="text" id="lkode" name="lkode" > <br>
+      <input type="password" id="lkode" name="lkode" > <br>
+
+      <input type="button" value="login" id="loginbtn" onclick="validate()"/>
 
       </p>
 
       <!-- Der skal være mellemrum mellem de to bokse -->
 
   </form>
-
-  <p>
-      <a href="Welcome.html">
-          <input class="næste" type="button" value="Næste" >
-          <!-- Fjern BOX omkring button -->
-      </a>
-  </p>
-
-      </p>
-  </div>
-
 
 </body>
 </html>
