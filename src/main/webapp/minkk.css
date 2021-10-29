@@ -13,7 +13,7 @@ body,html{
 
 
 .baggrundsbillede{
-    background-image: url("Billeder/baggrundsbillede.png");
+    background-image: url("baggrundsbillede.png");
     -webkit-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
