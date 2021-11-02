@@ -8,6 +8,8 @@
 </head>
 <body>
 <div class="baggrundsbillede"></div>
+<form>
+
 <div class="Titel">
   <h1>Opret konsultation</h1>
   <p>
@@ -15,23 +17,30 @@
   <div class="baggrundstext">
     <p>
 
-      <label for="name">CPR-nummer:</label><br>
-      <input type="text" id="name" style="width: 150px; height: 20px;" ><br>
+      <label for="CPRnummer">CPRnummer</label><br>
+      <input type="text" id="CPRnummer" name="CPRnummer" style="width: 150px; height: 20px;" required><br>
+
+      <label for="Navn">Navn</label><br>
+      <input type="text" id="Navn" name="Navn" style="width: 150px; height: 20px;" required><br>
 
 
-      <label class="starttidspunkt">  Starttidspunkt</label><br>
+      <label class="starttidspunkt">  Starttidspunkt </label><br>
       <input type="date">
-      <input type="time"> <br>
+      <input type="time">  <br>
 
 
 
       <label class="varighed" for="varighed">Varighed</label><br>
-      <input type="text" id="varighed" name="varighed" > <br>
+      <input type="text" id="varighed" name="varighed" required > <br>
+
+      <label for="Emne">Emne</label><br>
+      <input type="text" id="Emne" name="Emne" style="width: 150px; height: 20px;" required><br>
 
        <label for="notat">Notat</label><br>
-       <input type="text" id="notat" name="notat" style="width: 300px; height: 200px;"> <br>
+       <input type="text" id="notat" name="notat" style="width: 300px; height: 200px;" required> <br>
 
       </p>
+
   <p>
     <a href="Welcome.html">
     <input class="Tilbage" type="button" value="Tilbage"> </a>
@@ -62,5 +71,8 @@
   </div>
 </div>
 
+
+
+</form>
 </body>
 </html>
