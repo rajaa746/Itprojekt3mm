@@ -1,40 +1,41 @@
-async function opretPatient(){
-    let patientform= document.getElementById("patientform");
-    let formData = new FormData(patientform)
-    let patientJson = Object.fromEntries(formData);
-    let res = await fetch("rest/patients", {
+async function opretAftale(){
+    let Aftaleform= document.getElementById("aftaleform");
+    console.log(Aftaleform)
+    let formData = new FormData(Aftaleform)
+    let AftaleJson = Object.fromEntries(formData);
+    let res = await fetch("rest/aftale", {
         method:"POST",
-        body: JSON.stringify(patientJson),
+        body: JSON.stringify(AftaleJson),
         headers:{
             'content-type':"application/json"
         }
 
     })
     alert(res);
-    await hentPatienter();
+   // await hentAftale();
 
 
 }
-async function hentPatienter(){
-    let result = await fetch("rest/patients");
+async function hentAftale(){
+    let result = await fetch("rest/Aftale");
     console.log(result.status)
     if (result.status!=200){
         alert("noget gik galt!");
     }
     let json = await result.json();
     console.log(json)
-    updatePatienter(json)
+    updateAftale(json)
 
 }
 
-function updatePatienter(json) {
+function updateAftale(json) {
     let listelements =""
     json.forEach(function(element){
         listelements += ("<li>"+element.name+"</li>")
     })
 
-    let Patientlist= document.getElementById("patienter");
-    Patientlist.innerHTML=listelements
+    let Aftalelist= document.getElementById("Aftale");
+    Aftalelist.innerHTML=listelements
 
 
 }

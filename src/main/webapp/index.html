@@ -2,22 +2,53 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>index</title>
-
-<script src="script.js"></script>
+    <title>Region H</title>
+    <link rel="stylesheet" href="Forside2.0.css">
 </head>
-<body>
-<h1>
-    Velkommen
-</h1>
-<button onclick="hentPatienter();">test</button>
-<ul id="patienter">
-</ul>
-<form id="patientform">
-    <input type="text" name="name">
-</form>
 
-<button onclick="opretPatient()">Ny Patient</button>
+<script language="javascript" >
+
+    function validate(){
+        var fname = document.getElementById("fname").value;
+        var lkode = document.getElementById("lkode").value;
+        if ( fname == "123456-7890" && lkode == "hello"){
+
+            window.location = "Welcome.html"; // Redirecting to other page.
+            return false;
+        }
+        else{
+            alert("Forkert kode eller brugernavn prøv igen!");
+
+        }
+    }
+
+</script>
+
+<body>
+<div class="baggrundsbillede"></div>
+<div class="Titel">
+    <h1>REGION-H</h1>
+</div>
+<div class="baggrundstext">
+    <h2>Log Ind</h2>
+    <p>
+    <form action="welcome.html" method="post"   onclick="return
+check_info()";>
+        <label for="fname">CPR-nummer</label><br>
+        <input type="text" id="fname" brugernavn="fname" maxlength="11">  <br>
+
+        <label for="lkode">Adgangskode</label><br>
+        <input type="password" id="lkode" name="lkode" > <br>
+
+        <input type="button" value="login" id="loginbtn" onclick="validate()"/>
+
+        </p>
+
+
+        <!-- Der skal være mellemrum mellem de to bokse -->
+
+    </form>
+</div>
 
 </body>
 </html>

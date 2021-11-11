@@ -4,11 +4,11 @@
 
   <title>WELCOME</title>
   <link rel="stylesheet" href="Welcome.css">
+  <script src="script.js"></script>
 
 </head>
 <body>
 <div class="baggrundsbillede"></div>
-<form>
 
 <div class="Titel">
   <h1>Opret konsultation</h1>
@@ -16,40 +16,41 @@
 
   <div class="baggrundstext">
     <p>
-
+  <form id="aftaleform">
       <label for="CPRnummer">CPRnummer</label><br>
-      <input type="text" id="CPRnummer" name="CPRnummer" style="width: 150px; height: 20px;" required><br>
-
-      <label for="Navn">Navn</label><br>
-      <input type="text" id="Navn" name="Navn" style="width: 150px; height: 20px;" required><br>
-
-
-      <label class="starttidspunkt">  Starttidspunkt </label><br>
-      <input type="date">
-      <input type="time">  <br>
+      <input type="text" id="CPRnummer" name="cpr" style="width: 150px; height: 20px;" required><br>
+</form>
+      <input type="button" onclick="opretAftale()">Gem</input>
+      <!--
+       <label for="Navn">Navn</label><br>
+       <input type="text" id="Navn" name="Navn" style="width: 150px; height: 20px;" required><br>
 
 
-
-      <label class="varighed" for="varighed">Varighed</label><br>
-      <input type="text" id="varighed" name="varighed" required > <br>
-
-      <label for="Emne">Emne</label><br>
-      <input type="text" id="Emne" name="Emne" style="width: 150px; height: 20px;" required><br>
-
-       <label for="notat">Notat</label><br>
-       <input type="text" id="notat" name="notat" style="width: 300px; height: 200px;" required> <br>
-
-      </p>
-
-  <p>
-    <a href="Welcome.html">
-    <input class="Tilbage" type="button" value="Tilbage"> </a>
-    <BUTTON TYPE="button" ONCLICK="alert('Konsultationen er gemt, og notifikationen er blevet sendt')">Gem</BUTTON>
-  </p>
+       <label class="starttidspunkt">  Starttidspunkt </label><br>
+       <input type="date">
+       <input type="time">  <br>
 
 
 
-      <!-- Der skal være mellemrum mellem de to bokse -->
+       <label class="varighed" for="varighed">Varighed</label><br>
+       <input type="text" id="varighed" name="varighed" required > <br>
+
+       <label for="Emne">Emne</label><br>
+       <input type="text" id="Emne" name="Emne" style="width: 150px; height: 20px;" required><br>
+
+        <label for="notat">Notat</label><br>
+        <input type="text" id="notat" name="notat" style="width: 300px; height: 200px;" required> <br>
+ -->
+       </p>
+
+   <p>
+     <a href="Welcome.html">
+     <input class="Tilbage" type="button" value="Tilbage"> </a>
+   </p>
+
+
+
+       <!-- Der skal være mellemrum mellem de to bokse -->
 
 
   </div>
@@ -58,7 +59,7 @@
 
 <input id="knap" class="knap" type="checkbox">
 <label for="knap"></label>
-<a class="one" href="Forside2.0.html">Log Ud</a> <!-- ADD LOGO -->
+<a class="one" href="i.html">Log Ud</a> <!-- ADD LOGO -->
 <div class="two">Konto</div> <!-- ADD LOGO -->
 <div class="three" type="button">Kontakt</div> <!-- ADD LOGO -->
 
