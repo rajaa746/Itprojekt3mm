@@ -20,13 +20,19 @@ public class PatientService {
     public String getAftale(@PathParam("cpr") String cpr) {
 
         return null;
+
     }
+
 
     @POST@Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
 
     public Aftale postAftale(Aftale a) throws SQLException {
         System.out.println(a.getCpr());
+        System.out.println(a.getName());
+        System.out.println(a.gettidspunkt());
+        System.out.println(a.getdato());
+        System.out.println(a.getnotat());
         PatientDao.getInstance().saveAftale(a);
         Response.status(400).entity("message").build();
         return a;

@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <title>Mine konsulationer</title>
   <link rel="stylesheet" href="minkk.css">
+  <script src="script.js"></script>
+
 
 </head>
 
@@ -25,18 +27,16 @@
   <p>
     <label class="cprfelt" for="CPR-nr"> </label>
     <input type="text" placeholder="CPR-nr" id="CPR-nr"/>
-    <input type="date">
+   <!-- <input type="date">-->
   </p>
 
-  <table style="width:75%; border:3px solid black; margin-left:auto; margin-right:auto;" class="table" >
+  <table id="minktabel" style="width:auto; border:3px solid black; margin-left:auto; margin-right:auto; height:300px; overflow-y:scroll; display: block;" class="table" >
     <tr class="th">
-      <th>Tid</th>
-      <th>Dato</th>
-      <th>Varighed</th>
-      <th>CPR-nr</th>
       <th>Fulde navn</th>
-      <th>Emne</th>
-      <th>Notat</th>
+     <th>CPR-nr</th>
+      <!-- <th>Tid</th>
+      <th>Dato</th>
+     // <th>Notat</th>-->
     </tr>
 
 
@@ -44,21 +44,24 @@
 
 
 <div>
+
   <p>
     <a href="Welcome.html">
       <input class="Tilbage" type="button" value="Tilbage"> </a>
 
   </p>
 </div>
-
+<div>
+  <input type="button" onclick="hentAftale()" value="update">
 
 </div>
 
 </div>
+
 
 <input id="knap" class="knap" type="checkbox">
 <label for="knap"></label>
-<a class="one" href="i.html">Log Ud</a> <!-- ADD LOGO -->
+<a class="one" href="index.html">Log Ud</a> <!-- ADD LOGO -->
 <div class="two">Konto</div> <!-- ADD LOGO -->
 <div class="three" type="button">Kontakt</div> <!-- ADD LOGO -->
 
@@ -74,11 +77,12 @@
 
 </div>
 
+
 </div>
 
+<li id="aftaler">
 
-
-
+</li>
 
 </body>
 </html>

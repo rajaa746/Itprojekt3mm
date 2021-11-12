@@ -19,28 +19,22 @@
   <form id="aftaleform">
       <label for="CPRnummer">CPRnummer</label><br>
       <input type="text" id="CPRnummer" name="cpr" style="width: 150px; height: 20px;" required><br>
+    <label for="Navn">Navn</label><br>
+    <input type="text" id="Navn" name="name" style="width: 150px; height: 20px;" required><br>
+
+    <label class="tidspunkt"> Tidspunkt </label><br>
+    <input type="time"  id="tidspunkt" name="tidspunkt" placeholder="Fx 18:00-18:30">
+    <input type="dato"  id="dato" name="dato" placeholder="Fx 10-10-2010">  <br>
+
+    <label for="notat">Notat</label><br>
+    <input type="text" id="notat" name="notat" style="width: 300px; height: 200px;" required> <br>
+
+
 </form>
-      <input type="button" onclick="opretAftale()">Gem</input>
-      <!--
-       <label for="Navn">Navn</label><br>
-       <input type="text" id="Navn" name="Navn" style="width: 150px; height: 20px;" required><br>
-
-
-       <label class="starttidspunkt">  Starttidspunkt </label><br>
-       <input type="date">
-       <input type="time">  <br>
+    <input type="button" onclick="opretAftale()">Gem</input>
 
 
 
-       <label class="varighed" for="varighed">Varighed</label><br>
-       <input type="text" id="varighed" name="varighed" required > <br>
-
-       <label for="Emne">Emne</label><br>
-       <input type="text" id="Emne" name="Emne" style="width: 150px; height: 20px;" required><br>
-
-        <label for="notat">Notat</label><br>
-        <input type="text" id="notat" name="notat" style="width: 300px; height: 200px;" required> <br>
- -->
        </p>
 
    <p>
@@ -59,7 +53,7 @@
 
 <input id="knap" class="knap" type="checkbox">
 <label for="knap"></label>
-<a class="one" href="i.html">Log Ud</a> <!-- ADD LOGO -->
+<a class="one" href="index.html">Log Ud</a> <!-- ADD LOGO -->
 <div class="two">Konto</div> <!-- ADD LOGO -->
 <div class="three" type="button">Kontakt</div> <!-- ADD LOGO -->
 

@@ -7,20 +7,10 @@ public class PatientDao {
 
 
 
-        private List<Aftale> Aftale = new ArrayList<>();
+        //private List<aftale> Aftale = new ArrayList<>();
         private static PatientDao instance = new PatientDao();
 
     private PatientDao() {
-        /*
-            Patient melman = new Patient();
-            Patient marius = new Patient();
-            melman.setName("melman");
-            marius.setName("marius");
-            patients.add(melman);
-            patients.add(marius);
-
-         */
-
 
         }
     public static PatientDao getInstance () {
@@ -42,38 +32,41 @@ public class PatientDao {
                 Statement statement = conn.createStatement();
 
                 ResultSet rs = statement.executeQuery("SELECT * FROM aftale");
+                List<Aftale> aftaleList=new ArrayList<>();
                 while (rs.next()) {
-                    String CPR = rs.getString("CPR");
-                   // String Navn = rs.getString("Navn");
-                   // String tid = rs.getString("tid");
-                   // String dato = rs.getString("dato");
-                   // String varighed = rs.getString("varighed");
-                   // String Notat = rs.getString("Notat");
-                   // String Emne = rs.getString("Emne");
-                   // String LægeID = rs.getString("LægeID");
+                    String cpr = rs.getString("cpr");
+                    String navn = rs.getString("navn");
+                   String tidspunkt = rs.getString("tidspunkt");
+                    String dato = rs.getString("dato");
+                   String notat = rs.getString("notat");
 
-                    System.out.println(CPR);
-                  //  System.out.println(Navn);
-                   // System.out.println(tid);
-                   // System.out.println(dato);
-                   // System.out.println(varighed);
-                   // System.out.println(Notat);
-                   // System.out.println(Emne);
-                   // System.out.println(LægeID);
+                    Aftale aftale = new Aftale();
+                    aftale.setCpr(cpr);
+                    aftale.setName(navn);
+                    aftale.settidspunkt(tidspunkt);
+                    aftale.setNotat(notat);
+                    aftaleList.add(aftale);
 
+
+                    System.out.println(cpr);
+                   System.out.println(navn);
+                   System.out.println(tidspunkt);
+                    System.out.println(dato);
+                   System.out.println(notat);
 
 
 
                 }
                 statement.close();
+                return aftaleList;
             } catch (Exception e) {
                 System.err.println("Got an exception! ");
                 System.err.println(e.getMessage());
 
             }
 
+            return null;
 
-            return Aftale;
         }
 
         public void saveAftale (Aftale a){
@@ -91,7 +84,7 @@ public class PatientDao {
                 System.out.println("Inserting data into table called aftale");
                 stmt = conn.createStatement();
 
-                String sql = "INSERT INTO aftale (cpr) VALUES ('"+a.getCpr()+"')";
+                String sql = "INSERT INTO aftale (cpr, navn,tidspunkt,dato,notat) VALUES ('"+a.getCpr()+"','"+a.getName()+"','"+a.gettidspunkt()+"','"+a.getdato()+"','"+a.getnotat()+"')";
 
                 stmt.executeUpdate(sql);
 
@@ -102,7 +95,6 @@ public class PatientDao {
                 se.printStackTrace();
             }catch (Exception e) {
                 e.printStackTrace();
-
 
 
 

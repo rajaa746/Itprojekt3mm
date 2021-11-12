@@ -12,12 +12,12 @@ async function opretAftale(){
 
     })
     alert(res);
-   // await hentAftale();
+    await hentAftale();
 
 
 }
 async function hentAftale(){
-    let result = await fetch("rest/Aftale");
+    let result = await fetch("rest/aftale");
     console.log(result.status)
     if (result.status!=200){
         alert("noget gik galt!");
@@ -31,14 +31,20 @@ async function hentAftale(){
 function updateAftale(json) {
     let listelements =""
     json.forEach(function(element){
-        listelements += ("<li>"+element.name+"</li>")
-    })
+        listelements += ("<tr><td>"+element.name+"</td></tr>")
 
-    let Aftalelist= document.getElementById("Aftale");
-    Aftalelist.innerHTML=listelements
+
+    })
+    let aftalelist= document.getElementById("minktabel");
+
+        aftalelist.innerHTML+=listelements
+
+
+
+
+
 
 
 }
-
 
 
