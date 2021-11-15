@@ -10,16 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c2e835d3-913a-4cc1-a79d-d56c0eac2ce0" name="Changes" comment="Forside2.0.html">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Aftale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aftale.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PatientDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PatientDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PatientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PatientService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Mink.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Mink.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Welcome.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Welcome.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/opretk.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/opretk.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Test.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -316,7 +308,9 @@
       <workItem from="1636370933838" duration="15957000" />
       <workItem from="1636621397298" duration="19301000" />
       <workItem from="1636645505751" duration="2821000" />
-      <workItem from="1636708998329" duration="10120000" />
+      <workItem from="1636708998329" duration="10990000" />
+      <workItem from="1636725259604" duration="2147000" />
+      <workItem from="1636982744983" duration="353000" />
     </task>
     <task id="LOCAL-00001" summary="u">
       <created>1635514062329</created>
@@ -367,7 +361,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636632563867</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Forside2.0.html">
+      <created>1636720123536</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1636720123536</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
