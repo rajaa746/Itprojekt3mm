@@ -31,19 +31,16 @@ async function hentAftale(){
 function updateAftale(json) {
     let listelements =""
     json.forEach(function(element){
-        listelements += ("<tr><td>"+element.name+"</td></tr>")
+        listelements += ("<tr><td>"+element.name+"</td><td>"+element.cpr+"</td><td> "+element.tidspunkt+"</td><td> "+element.dato+"</td><td> "+element.notat+"</td></tr>")
 
 
     })
+
+
+
     let aftalelist= document.getElementById("minktabel");
 
         aftalelist.innerHTML+=listelements
-
-
-
-
-
-
 
 }
 
