@@ -10,18 +10,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c2e835d3-913a-4cc1-a79d-d56c0eac2ce0" name="Changes" comment="Forside2.0.html">
-      <change afterPath="$PROJECT_DIR$/src/main/java/business/JWTHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/datalayer/UserDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/LoginData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/api/ServiceLogin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/business/AppConfigL.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/business/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/main.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Aftale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aftale.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AppConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PatientDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PatientDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PatientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PatientService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -345,7 +338,7 @@
       <workItem from="1638364975242" duration="2067000" />
       <workItem from="1638367933954" duration="745000" />
       <workItem from="1638372233955" duration="5557000" />
-      <workItem from="1638436988117" duration="2759000" />
+      <workItem from="1638436988117" duration="3220000" />
     </task>
     <task id="LOCAL-00001" summary="u">
       <created>1635514062329</created>
@@ -417,7 +410,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637314686897</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Forside2.0.html">
+      <created>1638440293648</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1638440293649</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
