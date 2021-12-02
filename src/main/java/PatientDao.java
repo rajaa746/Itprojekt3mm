@@ -23,10 +23,9 @@ public class PatientDao {
 
             try {
                 Class.forName("com.mysql.cj.jdbc.Driver");
-                String url = "jdbc:mysql://localhost:3306/sys";
-                String user = "root";
-                String pass = "12345678";
-
+                String url = "jdbc:mysql://mysql-db.caprover.diplomportal.dk:3306/s205499";
+                String user = "s205499";
+                String pass = "77BJ4H2NODdIsbVtV8FF0";
 
                 Connection conn = DriverManager.getConnection(url, user, pass);
                 Statement statement = conn.createStatement();
@@ -78,11 +77,13 @@ public class PatientDao {
             try {
                 Class.forName("com.mysql.cj.jdbc.Driver");
                 System.out.println("Connecting to database");
-                conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/sys", "root", "12345678");
+                conn = DriverManager.getConnection("jdbc:mysql://mysql-db.caprover.diplomportal.dk:3306/s205499", "s205499", "77BJ4H2NODdIsbVtV8FF0");
                 System.out.println("You are now connected to database");
 
                 System.out.println("Inserting data into table called aftale");
                 stmt = conn.createStatement();
+
+                //vi åbner op for sql injection for at udngå dette skal man lave en pepered statment
 
                 String sql = "INSERT INTO aftale (cpr, navn,tidspunkt,dato,notat) VALUES ('"+a.getCpr()+"','"+a.getName()+"','"+a.gettidspunkt()+"','"+a.getdato()+"','"+a.getnotat()+"')";
 

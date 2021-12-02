@@ -5,3 +5,7 @@
 @ApplicationPath("rest")
 public class AppConfig extends Application {
 }
+
+// det klasse fortæller at det skal være en applikation
+
+

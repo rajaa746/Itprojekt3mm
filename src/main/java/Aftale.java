@@ -5,7 +5,7 @@ public class Aftale {
 
     private String name;
 
-   public String getName() {
+   public String getName() { //det vigigt at når man skal searlisere med jason at man lavet get og sets
        return name;
    }
 
