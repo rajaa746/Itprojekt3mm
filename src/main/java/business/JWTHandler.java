@@ -18,23 +18,24 @@ import java.util.Calendar;
 
 public class JWTHandler {
 
-    private static Key key;
-    private static final int TOKEN_EXPIRY = 2880; //2 days
+    private static Key key; //der laves en private key
+    private static final int TOKEN_EXPIRY = 2880; //2 days længden på hvor længde vores token skal overleve
 
-    public static String generateJwtToken(LoginData user){
+    public static String generateJwtToken(LoginData user){ //
         Calendar expiry = Calendar.getInstance();
         expiry.add(Calendar.MINUTE, TOKEN_EXPIRY);
         return Jwts.builder()
                 .setIssuer("test")
-                .claim("user", user.getUsername())
-                .signWith(SignatureAlgorithm.HS512, getKey())
+                .claim("user", user.getUsername()) //data, token skal indholde
+                .signWith(SignatureAlgorithm.HS512, getKey()) //signatur
                 .setExpiration(expiry.getTime())
                 .compact();
     }
 
 
 
-    private static Key getKey(){
+    private static Key getKey(){ //server genere en krypteret JWT med en hemmelige nøgler og sender tilbage til klienten
+        //der bruges en hemmelige nøgle til at signere token
 
         if (key==null) {
             if (System.getenv("JWT_SECRET_KEY")!= null && System.getenv("JWT_SECRET_KEY") != "") {
@@ -46,7 +47,7 @@ public class JWTHandler {
         }
         return key;
     }
-
+// validerng af token
     public static String validate(String authentication) {
         String[] tokenArray = authentication.split(" ");
         String token = tokenArray[tokenArray.length - 1];

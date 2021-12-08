@@ -2,7 +2,7 @@
         import javax.ws.rs.ApplicationPath;
         import javax.ws.rs.core.Application;
 
-@ApplicationPath("rest")
+@ApplicationPath("rest") //adresse der giver adgang til api/gør brug af api
 public class AppConfig extends Application {
 }
 

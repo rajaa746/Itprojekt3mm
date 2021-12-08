@@ -17,7 +17,7 @@ public class Webservlet extends HttpServlet {
         PrintWriter writer = resp.getWriter();
         writer.println("Hello");
         writer.close();
-
+// bruger servlet tomcat har for at kommunikere med applikationen denne klasse søger for at servlet kan modtage og respondere på anmodninger
 
     }
 }

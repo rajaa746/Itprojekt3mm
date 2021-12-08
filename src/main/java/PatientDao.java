@@ -84,6 +84,7 @@ public class PatientDao {
                 stmt = conn.createStatement();
 
                 //vi åbner op for sql injection for at udngå dette skal man lave en pepered statment
+                // for at undgår sql injektion skal der laves prepared statment hvilket filtre tegn
 
                 String sql = "INSERT INTO aftale (cpr, navn,tidspunkt,dato,notat) VALUES ('"+a.getCpr()+"','"+a.getName()+"','"+a.gettidspunkt()+"','"+a.getdato()+"','"+a.getnotat()+"')";
 

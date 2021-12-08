@@ -19,23 +19,9 @@ public class ServiceLogin {
     @Produces(MediaType.TEXT_PLAIN)
     // Tager imod deserialiserede data fra frontenden til Java-Object
     public String doLogin(LoginData loginData){
-        //returner en token hvis det går godt
+        //returner en valideret token (hvis det går godt) til klienten
         String token = loginCon.validateUser(loginData);
         System.out.println(token);
         return token;
     }
- /*
-    @POST
-    @Path("tokentest")
-    public LoginData postToken(String token){
-        LoginData validate = JWTHandler.validate(token);
-        return validate;
-    }
-  @GET
-    public List<aftaleList> getAftale(@HeaderParam("Authorization") String authHeader){
-        System.out.println(authHeader);
-        PatientDao user = JWTHandler.validate(authHeader);
-        System.out.println("User accessing giraffes: " + user);
-        return aftaleList;
-
-    }*/}
+}

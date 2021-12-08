@@ -7,12 +7,14 @@ import javax.ws.rs.core.Response;
 import java.sql.SQLException;
 import java.util.List;
 
-@Path("aftale") //dette gør at den bliver smmless op at tomcat og bliver brugt fornuftigt
+@Path("aftale") //dette gør at den bliver samlet op at tomcat og bliver brugt
 public class PatientService {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public List<Aftale> getAftaler(@HeaderParam("authorization") String token) throws SQLException {
+    //metoden getAftale får sin token fra script async function hentAftale() den bliver er splitet fra Bearer og derefter valideret i JWThandler og hvis den er godkendt
+    //har man adgang til dataen
+    public List<Aftale> getAftaler(@HeaderParam("authorization") String token) throws SQLException {//validere en token
         String s = token.split(" ")[1];
         JWTHandler.validate(s);
         return PatientDao.getInstance().getAftale();

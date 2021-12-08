@@ -1,9 +1,9 @@
-async function opretAftale(){
-    let Aftaleform= document.getElementById("aftaleform");// man får fat i formen så man kan gøre brug af den
+async function opretAftale(){ // frontend til backend/database
+    let Aftaleform= document.getElementById("aftaleform");// man får fat i form så man kan gøre brug af den
     console.log(Aftaleform)
     let formData = new FormData(Aftaleform)// formen bliver herefter konveteret til fromData
     let AftaleJson = Object.fromEntries(formData); //fromdata bliver konveteres til json så den kan fetchees
-    let res = await fetch("rest/aftale", { //
+    let res = await fetch("rest/aftale", { // API
         method:"POST",
         body: JSON.stringify(AftaleJson), //det man fetchere serialiseres til en string så det sendes over nettet
         headers:{
@@ -15,8 +15,9 @@ async function opretAftale(){
     await hentAftale();
 
 
+ // der fetch data fra database som lige er blevet opretet med forrige kode
 }
-async function hentAftale(){
+async function hentAftale(){ //database/backend til frontend
     let result = await fetch("rest/aftale",{
         headers:{
             "authorization":"Bearer "+localStorage.getItem("token")
@@ -32,7 +33,7 @@ async function hentAftale(){
 
 }
 
-function updateAftale(json) {
+function updateAftale(json) { //når der skal tilføjes ny data ind i tabelen gøres det via denne kode der fortæller hvor det forskelige data skal placeres
     let listelements =""
     json.forEach(function(element){
         listelements += ("<tr><td>"+element.name+"</td><td>"+element.cpr+"</td><td> "+element.tidspunkt+"</td><td> "+element.dato+"</td><td> "+element.notat+"</td></tr>")
@@ -42,7 +43,7 @@ function updateAftale(json) {
 
 
 
-    let aftalelist= document.getElementById("minktabel");
+    let aftalelist= document.getElementById("minktabel"); //id på tabelen
 
         aftalelist.innerHTML+=listelements
 
